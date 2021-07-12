@@ -23,7 +23,7 @@ MK_WORK_PATH () {
         fi  
     done      
 }
-
+#脚本使用说明，需要日志文件名称
 if [ $# == 0 ];then
 	echo -e "\E[1;31mUsage \"$0 log_file_name\" \E[0m"
 	exit 0
@@ -32,6 +32,7 @@ fi
 MK_WORK_PATH
 
 #main 
+#日志文件名称去拼凑前一日的日志文件名字（日志切割另有他人写，名称以及存储路径比较奇葩）
 for LOG_FILE in $@
 do
     PATH_NAME=`echo $LOG_FILE |awk -F'.' '{print $1}'`
