@@ -47,20 +47,20 @@ do
     do
         case ${CHANGSHANG} in
                 "baidu")
-                    grep -E "Baiduspider|baiduspider" ${DAY_LOG_FILE}|awk '{print "域名：",$(NF-1),"  访问IP：",$2,"  访问时间：",$5,"  访问路径:",$8,"  状态码：",$10,"  抓取大小："$11,"  爬虫：Baiduspider*"}' >> ${WORK_PATH}/${CHANGSHANG}/${FILE_NAME}/${LOG_FILE}_baiduSpider.txt
+                    grep -E "Baiduspider|baiduspider" ${DAY_LOG_FILE}|awk '{print $(NF-1),"  ",$2," ",$5," ",$8," ",$10," "$11,"  Baiduspider*"}' >> ${WORK_PATH}/${CHANGSHANG}/${FILE_NAME}/${LOG_FILE}_baiduSpider.txt
                     ;;
                  "360")
-                     grep -E "360spider" ${DAY_LOG_FILE}|awk '{print "域名：",$(NF-1),"  访问IP：",$2,"  访问时间：",$5,"  访问路径:",$8,"  状态码：",$10,"  抓取大小："$11,"  爬虫：360spider*"}' >> ${WORK_PATH}/${CHANGSHANG}/${FILE_NAME}/${LOG_FILE}_360Spider.txt
-                     grep -E "HaoSouSpider" ${DAY_LOG_FILE}|awk '{print "域名：",$(NF-1),"  访问IP：",$2,"  访问时间：",$5,"  访问路径:",$8,"  状态码：",$10,"  抓取大小："$11,"  爬虫：HaoSouSpider*"}' >> ${WORK_PATH}/${CHANGSHANG}/${FILE_NAME}/${LOG_FILE}_360Spider.txt
+                     grep -E "360spider" ${DAY_LOG_FILE}|awk '{print $(NF-1)," ",$2," ",$5," ",$8," ",$10," "$11," 360spider*"}' >> ${WORK_PATH}/${CHANGSHANG}/${FILE_NAME}/${LOG_FILE}_360Spider.txt
+                     grep -E "HaoSouSpider" ${DAY_LOG_FILE}|awk '{print $(NF-1)," ",$2," ",$5," ",$8," ",$10," "$11," HaoSouSpider*"}' >> ${WORK_PATH}/${CHANGSHANG}/${FILE_NAME}/${LOG_FILE}_360Spider.txt
                      ;;
                   "souhu")
-                      grep -E "Sosospider|sogou|Sogou" ${DAY_LOG_FILE}|awk '{print "域名：",$(NF-1),"  访问IP：",$2,"  访问时间：",$5,"  访问路径:",$8,"  状态码：",$10,"  抓取大小："$11,"  爬虫：Sosospider|sogou|Sogou*"}' >> ${WORK_PATH}/${CHANGSHANG}/${FILE_NAME}/${LOG_FILE}_sgouSpider.txt
+                      grep -E "Sosospider|sogou|Sogou" ${DAY_LOG_FILE}|awk '{print $(NF-1)," ",$2," ",$5," ",$8," ",$10," "$11," Sosospider|sogou|Sogou*"}' >> ${WORK_PATH}/${CHANGSHANG}/${FILE_NAME}/${LOG_FILE}_sgouSpider.txt
                       ;;
                    "shenma")
-                       grep -E "Yisouspider" ${DAY_LOG_FILE}|awk '{print "域名：",$(NF-1),"  访问IP：",$2,"  访问时间：",$5,"  访问路径:",$8,"  状态码：",$10,"  抓取大小："$11,"  爬虫：Yisouspider*"}' >> ${WORK_PATH}/${CHANGSHANG}/${FILE_NAME}/${LOG_FILE}_shenmaSpider.txt
+                       grep -E "Yisouspider" ${DAY_LOG_FILE}|awk '{print $(NF-1)," ",$2," ",$5," ",$8," ",$10," "$11,"  Yisouspider*"}' >> ${WORK_PATH}/${CHANGSHANG}/${FILE_NAME}/${LOG_FILE}_shenmaSpider.txt
                        ;;
                     "toutiao")
-                        grep -E "Bytespider" ${DAY_LOG_FILE}|awk '{print "域名：",$(NF-1),"  访问IP：",$2,"  访问时间：",$5,"  访问路径:",$8,"  状态码：",$10,"  抓取大小："$11,"  爬虫：Bytespider*"}' >> ${WORK_PATH}/${CHANGSHANG}/${FILE_NAME}/${LOG_FILE}_Bytespider.txt
+                        grep -E "Bytespider" ${DAY_LOG_FILE}|awk '{print $(NF-1)," ",$2," ",$5," ",$8," ",$10," "$11," Bytespider*"}' >> ${WORK_PATH}/${CHANGSHANG}/${FILE_NAME}/${LOG_FILE}_Bytespider.txt
                         ;;
                      *)
                      ;;
